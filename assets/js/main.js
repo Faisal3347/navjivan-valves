@@ -44,40 +44,6 @@
     window.addEventListener("resize", function () {
       if (window.innerWidth > 860) closeNav();
     });
-
-    /* ---------- Contact / enquiry form (mailto fallback, no backend) ---------- */
-    var form = document.getElementById("enquiry-form");
-    if (form) {
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        var status = document.getElementById("form-status");
-        var name = form.querySelector("#name").value.trim();
-        var email = form.querySelector("#email").value.trim();
-        var phone = form.querySelector("#phone") ? form.querySelector("#phone").value.trim() : "";
-        var product = form.querySelector("#product") ? form.querySelector("#product").value : "";
-        var message = form.querySelector("#message").value.trim();
-
-        if (!name || !email || !message) {
-          status.textContent = "Please fill in your name, email and requirement.";
-          status.style.color = "#C4151C";
-          return;
-        }
-
-        var subject = encodeURIComponent("Product Enquiry from " + name + (product ? " — " + product : ""));
-        var body = encodeURIComponent(
-          "Name: " + name +
-          "\nEmail: " + email +
-          (phone ? "\nPhone: " + phone : "") +
-          (product ? "\nProduct: " + product : "") +
-          "\n\nRequirement:\n" + message
-        );
-
-        window.location.href = "mailto:Navjivanvalves@gmail.com?subject=" + subject + "&body=" + body;
-        status.textContent = "Opening your email app to send this enquiry to Navjivan Valves…";
-        status.style.color = "#101828";
-      });
-    }
-
     /* ---------- Current year in footer ---------- */
     var yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
