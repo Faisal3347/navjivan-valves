@@ -47,7 +47,7 @@ Before going live:
   existing Navjivan Valves brand (red `#ED1C24` / navy `#101828`).
 - All product specifications, standards, materials and company details are
   sourced from the original site's real content — nothing was invented.
-- Pricing is shown as "Price on Request" throughout, since reliable public
+- Valve product pages show an indicative IndiaMART price range (schema: AggregateOffer lowPrice/highPrice, edit both the schema and the visible "Indicative price" line together). Flanges/pipes/fittings stay "Price on Request". Original note: reliable public
   pricing for these industrial products could not be verified (see the audit
   report, section H, for the reasoning).
 
